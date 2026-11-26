@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>CampusConnect — Your campus, in sync</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" data-page="dashboard" aria-label="CampusConnect home">
+          <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+          <span>campus<span class="brand-light">connect</span></span>
+        </a>
+        <div class="campus-switcher">
+          <div class="campus-seal">N</div>
+          <div><strong>Northfield College</strong><small>Student portal</small></div>
+          <span class="chevron">⌄</span>
+        </div>
+        <div class="nav-label">YOUR CAMPUS</div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-page="dashboard"><span class="nav-icon">⌂</span>Overview</button>
+          <button class="nav-item" data-page="announcements"><span class="nav-icon">▤</span>Announcements<span class="nav-count">3</span></button>
+          <button class="nav-item" data-page="events"><span class="nav-icon">▦</span>Events</button>
+          <button class="nav-item" data-page="timetable"><span class="nav-icon">◷</span>Timetable</button>
+          <button class="nav-item" data-page="lost-found"><span class="nav-icon">⌕</span>Lost &amp; found</button>
+          <button class="nav-item" data-page="resources"><span class="nav-icon">▣</span>Resources</button>
+          <button class="nav-item" data-page="clubs"><span class="nav-icon">♧</span>Clubs &amp; societies</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="help-card"><span class="help-icon">✳</span><strong>Need a hand?</strong><p>We’re here to help you find your way.</p><button data-toast="Opening the student support centre…">Visit help centre <span>→</span></button></div>
+          <button class="profile-button"><span class="avatar avatar-small">JM</span><span class="profile-name"><strong>Jordan Miller</strong><small>Year 2 · Computer Science</small></span><span class="more">···</span></button>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobile-menu" aria-label="Open menu">☰</button>
+          <div class="breadcrumb"><span>Northfield College</span><b>/</b><strong id="crumb-current">Overview</strong></div>
+          <div class="topbar-actions">
+            <label class="search-box"><span>⌕</span><input id="global-search" type="search" placeholder="Search anything..." aria-label="Search campus" /><kbd>⌘ K</kbd></label>
+            <button class="icon-button notification-button" aria-label="Notifications" data-toast="You’re all caught up!"><span>♧</span><i></i></button>
+            <span class="avatar">JM</span>
+          </div>
+        </header>
+        <div id="content" class="content"></div>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
